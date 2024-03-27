@@ -1,0 +1,84 @@
+[
+    {
+        "name": "Standing Calf Raises",
+        "muscle_group": "Calves",
+        "equipment": ["Calf Raise Machine", "Smith Machine"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Seated Calf Raises",
+        "muscle_group": "Calves",
+        "equipment": ["Calf Raise Machine"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Donkey Calf Raises",
+        "muscle_group": "Calves",
+        "equipment": ["Donkey Calf Raise Machine"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Calf Press on Leg Press Machine",
+        "muscle_group": "Calves",
+        "equipment": ["Leg Press Machine"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Jump Rope (Skipping)",
+        "muscle_group": "Calves",
+        "equipment": ["Jump Rope"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Calf Raises with Dumbbells",
+        "muscle_group": "Calves",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Tibialis Raises",
+        "muscle_group": "Calves",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Calf Stretch with Wall",
+        "muscle_group": "Calves",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "N/A"
+    },
+    {
+        "name": "Eccentric Calf Raises",
+        "muscle_group": "Calves",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    }
+]
+

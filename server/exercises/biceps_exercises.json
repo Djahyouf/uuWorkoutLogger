@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Barbell Bicep Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Bicep Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Alternating Dumbbell Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Hammer Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Preacher Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Preacher Curl Bench", "Barbell", "EZ Curl Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Incline Dumbbell Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Dumbbells", "Incline Bench"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Concentration Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Bicep Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "EZ Bar Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["EZ Curl Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Reverse Grip Barbell Curl",
+        "muscle_group": "Biceps",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    }
+]
+

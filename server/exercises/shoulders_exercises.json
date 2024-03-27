@@ -1,0 +1,183 @@
+[
+    {
+        "name": "Standing Overhead Dumbbell Press",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Seated Overhead Dumbbell Press",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Arnold Press",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Lateral Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Lateral Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Front Dumbbell Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Front Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Upright Barbell Rows",
+        "muscle_group": "Shoulders",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Shrugs",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Face Pulls",
+        "muscle_group": "Shoulders",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Bent-over Dumbbell Lateral Raises (Reverse Flyes)",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Reverse Pec Deck Flyes",
+        "muscle_group": "Shoulders",
+        "equipment": ["Pec Deck Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Shoulder Press Machine",
+        "muscle_group": "Shoulders",
+        "equipment": ["Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Machine Lateral Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Shoulder Press on an Incline Bench",
+        "muscle_group": "Shoulders",
+        "equipment": ["Dumbbells", "Bench"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Handstand Push-ups (Advanced)",
+        "muscle_group": "Shoulders",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Advanced",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Pike Push-ups",
+        "muscle_group": "Shoulders",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Plate Front Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Weight Plates"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Single-arm Cable Lateral Raises",
+        "muscle_group": "Shoulders",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Barbell Push Press",
+        "muscle_group": "Shoulders",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    }
+]
+

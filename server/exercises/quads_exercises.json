@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Barbell Back Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Barbell", "Power Rack"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Front Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Goblet Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Dumbbell", "Kettlebell"],
+        "difficulty_level": "Beginner",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Bulgarian Split Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Bodyweight", "Dumbbells", "Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Lunges",
+        "muscle_group": "Quads",
+        "equipment": ["Bodyweight", "Dumbbells", "Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Walking Lunges",
+        "muscle_group": "Quads",
+        "equipment": ["Bodyweight", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Box Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Box", "Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Hack Squats",
+        "muscle_group": "Quads",
+        "equipment": ["Hack Squat Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Leg Press",
+        "muscle_group": "Quads",
+        "equipment": ["Leg Press Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Step-ups",
+        "muscle_group": "Quads",
+        "equipment": ["Box", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    }
+]
+

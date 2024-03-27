@@ -1,0 +1,390 @@
+[
+    {
+        "name": "Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Sumo Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Romanian Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Trap Bar Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Trap Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Pull-ups",
+        "muscle_group": "Back",
+        "equipment": ["Pull-up Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Wide Grip Pull-ups",
+        "muscle_group": "Back",
+        "equipment": ["Pull-up Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Close Grip Pull-ups",
+        "muscle_group": "Back",
+        "equipment": ["Pull-up Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Chin-ups",
+        "muscle_group": "Back",
+        "equipment": ["Pull-up Bar"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Barbell Rows",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Bent-over Barbell Rows",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Pendlay Rows",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "T-bar Rows",
+        "muscle_group": "Back",
+        "equipment": ["T-bar Row Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Rows",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Single-arm Dumbbell Rows",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Renegade Rows",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Lat Pulldowns",
+        "muscle_group": "Back",
+        "equipment": ["Lat Pulldown Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Wide Grip Lat Pulldowns",
+        "muscle_group": "Back",
+        "equipment": ["Lat Pulldown Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Close Grip Lat Pulldowns",
+        "muscle_group": "Back",
+        "equipment": ["Lat Pulldown Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Rows",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Seated Cable Rows",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Standing Cable Rows",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "One-arm Cable Rows",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Pull-throughs",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Hyperextensions",
+        "muscle_group": "Back",
+        "equipment": ["Hyperextension Bench"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Good Mornings",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Face Pulls",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Shrugs",
+        "muscle_group": "Back",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Barbell Shrugs",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Shrugs",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Inverted Rows",
+        "muscle_group": "Back",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Inverted Row with Feet Elevated",
+        "muscle_group": "Back",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Inverted Row with Suspension Trainer",
+        "muscle_group": "Back",
+        "equipment": ["Suspension Trainer"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Reverse Flyes",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Reverse Flyes",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Reverse Flyes",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Stiff-legged Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Deficit Deadlifts",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Pullovers",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Straight-arm Pulldowns",
+        "muscle_group": "Back",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Farmer's Walk",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Bent-over Rear Delt Raises",
+        "muscle_group": "Back",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Meadow's Rows",
+        "muscle_group": "Back",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Back Extensions",
+        "muscle_group": "Back",
+        "equipment": ["Hyperextension Bench"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    }
+]
+

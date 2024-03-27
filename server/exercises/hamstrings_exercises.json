@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Deadlifts",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Romanian Deadlifts",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Stiff-legged Deadlifts",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Single-leg Deadlifts",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Dumbbells", "Kettlebells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Glute-Ham Raises",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Glute-Ham Raise Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Hamstring Curls",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Leg Curl Machine", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Good Mornings",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Bulgarian Split Squats",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Bodyweight", "Dumbbells", "Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Lunges",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Bodyweight", "Dumbbells", "Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Kettlebell Swings",
+        "muscle_group": "Hamstrings",
+        "equipment": ["Kettlebell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    }
+]
+

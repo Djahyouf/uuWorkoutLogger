@@ -1,0 +1,273 @@
+[
+    {
+        "name": "Barbell Bench Press",
+        "muscle_group": "Chest",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Bench Press",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Incline Bench Press",
+        "muscle_group": "Chest",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Decline Bench Press",
+        "muscle_group": "Chest",
+        "equipment": ["Barbell", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Chest Press Machine",
+        "muscle_group": "Chest",
+        "equipment": ["Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Machine Flyes",
+        "muscle_group": "Chest",
+        "equipment": ["Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Pullover",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Chest Dips",
+        "muscle_group": "Chest",
+        "equipment": ["Parallel Bars"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Medicine Ball Chest Pass",
+        "muscle_group": "Chest",
+        "equipment": ["Medicine Ball"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Hex Press",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Guillotine Press",
+        "muscle_group": "Chest",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Plyometric Push-ups",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Advanced",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Landmine Press",
+        "muscle_group": "Chest",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "TRX Chest Press",
+        "muscle_group": "Chest",
+        "equipment": ["TRX Suspension Trainer"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Stability Ball Dumbbell Press",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells", "Stability Ball"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Smith Machine Bench Press",
+        "muscle_group": "Chest",
+        "equipment": ["Smith Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Standard Push-up",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Wide Grip Push-up",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Close Grip Push-up",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Decline Push-up",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Incline Push-up",
+        "muscle_group": "Chest",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Beginner",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Chest Press (Low)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Chest Press (Middle)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Chest Press (High)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Flyes (Flat)",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Flyes (Incline)",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Dumbbell Flyes (Decline)",
+        "muscle_group": "Chest",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Flyes (Low)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Flyes (Middle)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Cable Flyes (High)",
+        "muscle_group": "Chest",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    }
+]
+

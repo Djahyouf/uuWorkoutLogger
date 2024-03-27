@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Tricep Dips",
+        "muscle_group": "Triceps",
+        "equipment": ["Parallel Bars"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Close Grip Bench Press",
+        "muscle_group": "Triceps",
+        "equipment": ["Barbell"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Tricep Pushdown (Rope Attachment)",
+        "muscle_group": "Triceps",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Overhead Tricep Extension",
+        "muscle_group": "Triceps",
+        "equipment": ["Dumbbells", "Barbell", "Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Skull Crushers",
+        "muscle_group": "Triceps",
+        "equipment": ["Barbell", "EZ Curl Bar", "Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Tricep Kickbacks",
+        "muscle_group": "Triceps",
+        "equipment": ["Dumbbells"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Cable Tricep Extension",
+        "muscle_group": "Triceps",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Full"
+    },
+    {
+        "name": "Tricep Rope Pushdown",
+        "muscle_group": "Triceps",
+        "equipment": ["Cable Machine"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": false,
+        "isolation_vs_compound": "Isolation",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Bench Dips",
+        "muscle_group": "Triceps",
+        "equipment": ["Bench"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Partial"
+    },
+    {
+        "name": "Diamond Push-ups",
+        "muscle_group": "Triceps",
+        "equipment": ["Bodyweight"],
+        "difficulty_level": "Intermediate",
+        "bodyweight": true,
+        "isolation_vs_compound": "Compound",
+        "range_of_motion": "Full"
+    }
+]
+
