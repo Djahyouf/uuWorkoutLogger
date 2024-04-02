@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Modal from 'react-modal';
+import LogWorkout from './components/logger';
 
 function App() {
     const [data, setData] = useState([]);
@@ -84,6 +85,9 @@ function App() {
 
     return (
         <div className="App">
+            
+            <LogWorkout />
+
             <header className="App-header">
                 <h1>Exercise Data</h1>
                 <button onClick={fetchData} disabled={isLoading}>
@@ -98,6 +102,7 @@ function App() {
                     )))}
                 </ul>
             </header>
+            
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -115,6 +120,7 @@ function App() {
                     <button type="button" onClick={createCustomExercise}>Save</button>
                 </form>
             </Modal>
+
         </div>
     );
 }
