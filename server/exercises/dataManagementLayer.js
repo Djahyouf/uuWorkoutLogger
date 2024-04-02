@@ -15,6 +15,7 @@ const HAMSTRINGS = "hamstrings_exercises.json";
 const QUADS = "quads_exercises.json";
 const SHOULDERS = "shoulders_exercises.json";
 const TRICEPS = "triceps_exercises.json";
+const CUSTOM = "custom_exercises.json";
 
 async function readDataRoutines(entityName) {
     const rawFileContent = await fs.readFile(path.join(dataPath, entityName));
@@ -30,8 +31,19 @@ async function getExercises() {
     const quads = await readDataRoutines(QUADS);
     const shoulders = await readDataRoutines(SHOULDERS);
     const triceps = await readDataRoutines(TRICEPS);
+    const custom = await readDataRoutines(CUSTOM);
 
-    return { back, biceps, calves, chest, hamstrings, quads, shoulders, triceps };
+    return { back, biceps, calves, chest, hamstrings, quads, shoulders, triceps, custom };
 }
 
+async function createCustomExercise(newExercise) {
+    const customExercisesFile = path.join(dataPath, CUSTOM);
+    let customExercises = await readDataRoutines(CUSTOM);
+
+    customExercises.push(newExercise);
+
+    await fs.writeFile(customExercisesFile, JSON.stringify(customExercises, null, 2));
+}
+
+module.exports.createCustomExercise = createCustomExercise;
 module.exports.getExercises = getExercises;

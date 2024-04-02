@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Custom1",
+    "muscle_group": "chest",
+    "difficulty_level": "hard"
+  },
+  {
+    "name": "Custom2",
+    "muscle_group": "leg",
+    "difficulty_level": "hard"
+  },
+  {
+    "name": "Custom3",
+    "muscle_group": "shoulders",
+    "difficulty_level": "hard"
+  }
+]

@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const exercisesRouter = require('./routes/exercises'); // Assuming your router file is in './routes/exercises'
 

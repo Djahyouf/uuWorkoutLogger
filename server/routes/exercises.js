@@ -17,5 +17,19 @@ router.get('/exercises', async (req, res) => {
     }
 });
 
+router.post('/custom-exercises', async (req, res) => {
+
+    console.log('Received request body:', req.body);
+
+    try {
+        const newExercise = req.body;
+        await dml.createCustomExercise(newExercise);
+        res.status(201).json({ message: 'Custom exercise created successfully!' });
+    } catch (error) {
+        console.error("Error creating custom exercise:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 module.exports = router;
 
