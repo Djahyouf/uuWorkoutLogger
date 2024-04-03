@@ -1,22 +1,29 @@
 [
   {
-    "name": "Custom1",
+    "name": "custom1",
+    "muscle_group": "arms",
+    "difficulty_level": "hard",
+    "equipement": "machine",
+    "bodyweight": false,
+    "isolation_vs_compound": "isolation",
+    "range_of_motion": "full"
+  },
+  {
+    "name": "custom2",
+    "muscle_group": "legs",
+    "difficulty_level": "extreme",
+    "equipement": "machine",
+    "bodyweight": false,
+    "isolation_vs_compound": "compound",
+    "range_of_motion": "partial"
+  },
+  {
+    "name": "custom3",
     "muscle_group": "chest",
-    "difficulty_level": "hard"
-  },
-  {
-    "name": "Custom2",
-    "muscle_group": "leg",
-    "difficulty_level": "hard"
-  },
-  {
-    "name": "Custom3",
-    "muscle_group": "shoulders",
-    "difficulty_level": "hard"
-  },
-  {
-    "name": "Custom4",
-    "muscle_group": "abs",
-    "difficulty_level": "easy"
+    "difficulty_level": "medium",
+    "equipement": "floor",
+    "bodyweight": true,
+    "isolation_vs_compound": "compound",
+    "range_of_motion": "full"
   }
 ]

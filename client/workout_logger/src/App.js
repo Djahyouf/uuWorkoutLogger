@@ -11,7 +11,11 @@ function App() {
     const [customExerciseData, setCustomExerciseData] = useState({
         name: '',
         muscle_group: '',
-        difficulty_level: ''
+        difficulty_level: '',
+        equipement: '',
+        bodyweight: false,
+        isolation_vs_compound: '',
+        range_of_motion: ''
     });
     const [isEmptyField, setIsEmptyField] = useState(false);
 
@@ -34,7 +38,7 @@ function App() {
 
     const createCustomExercise = async () => {
         const { name, muscle_group, difficulty_level } = customExerciseData;
-        if (!name || !muscle_group || !difficulty_level) {
+        if (!name || !muscle_group || !difficulty_level ) {
             setIsEmptyField(true);
             return;
         }
@@ -83,6 +87,11 @@ function App() {
         }
     };
 
+    
+    const difficultyLevels = ['easy', 'medium', 'hard', 'extreme'];
+    const rangeOfMotions = ['static', 'partial', 'full'];
+    const isolationOrCompound = ['isolation', 'compound'];
+
     return (
         <div className="App">
             
@@ -115,7 +124,28 @@ function App() {
                     <label>Muscle Group:</label>
                     <input type="text" name="muscle_group" value={customExerciseData.muscle_group} onChange={handleInputChange} />
                     <label>Difficulty:</label>
-                    <input type="text" name="difficulty_level" value={customExerciseData.difficulty_level} onChange={handleInputChange} />
+                    <select name="difficulty_level" value={customExerciseData.difficulty_level} onChange={handleInputChange}>
+                    {difficultyLevels.map((level, index) => (
+                        <option key={index} value={level}>{level}</option>
+                        ))}
+                    </select>
+                    <label>Equipment:</label>
+                    <input type="text" name="equipement" value={customExerciseData.equipement} onChange={handleInputChange} />
+                    <label>Bodyweight:</label>
+                    <input type="checkbox" name="bodyweight" checked={customExerciseData.bodyweight} onChange={() => setCustomExerciseData({ ...customExerciseData, bodyweight: !customExerciseData.bodyweight })} />
+                    <label>Isolation vs Compound:</label>
+                    <select name="isolation_vs_compound" value={customExerciseData.isolation_vs_compound} onChange={handleInputChange}>
+                        {isolationOrCompound.map((motion, index) => (
+                            <option key={index} value={motion}>{motion}</option>
+                        ))}
+                    </select>
+
+                    <label>Range of Motion:</label>
+                    <select name="range_of_motion" value={customExerciseData.range_of_motion} onChange={handleInputChange}>
+                        {rangeOfMotions.map((motion, index) => (
+                            <option key={index} value={motion}>{motion}</option>
+                        ))}
+                    </select>
                     {isEmptyField && <p>Please fill in all fields.</p>}
                     <button type="button" onClick={createCustomExercise}>Save</button>
                 </form>
