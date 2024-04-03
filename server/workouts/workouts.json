@@ -1,0 +1,84 @@
+[
+  {
+    "date": "2024-04-03T09:01:55.413Z",
+    "volume": 0,
+    "exercises": [
+      {
+        "name": "Deadlifts",
+        "sets": [
+          {
+            "reps": "1",
+            "weight": "1"
+          }
+        ]
+      },
+      {
+        "name": "Sumo Deadlifts",
+        "sets": [
+          {
+            "reps": "2",
+            "weight": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-04-03T09:08:36.044Z",
+    "volume": 0,
+    "exercises": [
+      {
+        "name": "Barbell Back Squats",
+        "sets": [
+          {
+            "reps": "5",
+            "weight": "60"
+          },
+          {
+            "reps": "5",
+            "weight": "80"
+          },
+          {
+            "reps": "8",
+            "weight": "100"
+          },
+          {
+            "reps": "6",
+            "weight": "100"
+          }
+        ]
+      },
+      {
+        "name": "Romanian Deadlifts",
+        "sets": [
+          {
+            "reps": "12",
+            "weight": "70"
+          },
+          {
+            "reps": "12",
+            "weight": "70"
+          }
+        ]
+      },
+      {
+        "name": "Walking Lunges",
+        "sets": [
+          {
+            "reps": "60",
+            "weight": "20"
+          }
+        ]
+      },
+      {
+        "name": "Standing Calf Raises",
+        "sets": [
+          {
+            "reps": "12",
+            "weight": "10"
+          }
+        ]
+      }
+    ]
+  }
+]

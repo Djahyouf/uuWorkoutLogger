@@ -57,6 +57,11 @@ function LogWorkout() {
         setExercises([...exercises, { exercise: '', sets: [{ reps: '', weight: '' }] }]);
     };
 
+    const calculateTotalVolume = () => {
+        // Logic to calculate total volume
+        return 0;
+    };
+
     const closeModal = () => {
         setModalIsOpen(false);
     };
@@ -64,12 +69,25 @@ function LogWorkout() {
     const saveWorkout = async () => {
         try {
             setIsLoading(true);
-            const response = await fetch('http://localhost:3001/api/logged-workout', {
+
+            const formattedWorkout = {
+                date: new Date().toISOString(),
+                volume: calculateTotalVolume(),
+                exercises: exercises.map(exercise => ({
+                    name: exercise.exercise,
+                    sets: exercise.sets.map(set => ({
+                        reps: set.reps,
+                        weight: set.weight
+                    }))
+                }))
+            };
+
+            const response = await fetch('http://localhost:3001/api/workouts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(exercises)
+                body: JSON.stringify(formattedWorkout)
             });
 
             if (!response.ok) {

@@ -13,5 +13,10 @@
     "name": "Custom3",
     "muscle_group": "shoulders",
     "difficulty_level": "hard"
+  },
+  {
+    "name": "Custom4",
+    "muscle_group": "abs",
+    "difficulty_level": "easy"
   }
 ]

@@ -1,11 +1,12 @@
 const express = require('express');
-const dml = require('../exercises/dataManagementLayer');
+const dml = require('../exercises/exercisesDataManagementLayer');
 
 const router = express.Router();
 
-// Define route to fetch exercises data
 router.get('/exercises', async (req, res) => {
+    
     console.log("exercises requested...");
+    
     try {
         const exercises = await dml.getExercises();
         console.log("exercises recieved !");
