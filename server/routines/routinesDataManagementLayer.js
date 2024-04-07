@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require("uuid");
 const fs = require("node:fs/promises");
 const path = require("path");
 
@@ -16,6 +17,8 @@ async function readRoutines() {
 }
 
 async function saveRoutine(routine) {
+  routine.id = uuidv4();
+
   try {
     let routines = await readRoutines();
     routines.push(routine);
