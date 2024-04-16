@@ -25,5 +25,14 @@
     "bodyweight": true,
     "isolation_vs_compound": "compound",
     "range_of_motion": "full"
+  },
+  {
+    "name": "custom4",
+    "muscle_group": "legs",
+    "difficulty_level": "easy",
+    "equipement": "Barbell",
+    "bodyweight": false,
+    "isolation_vs_compound": "compound",
+    "range_of_motion": "full"
   }
 ]
