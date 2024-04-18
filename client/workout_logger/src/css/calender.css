@@ -1,0 +1,56 @@
+.calendar-container {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.calender-content {
+  width: 15%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.navigation h2 {
+  width: 15%;
+}
+
+.navigation button {
+  margin: 0 10px;
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150%;
+}
+
+.calendar-grid {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+  transform: translateX(265.25%);
+}
+
+.date,
+.empty {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.workout-date {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #ffcc80;
+  color: #333;
+}

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
+import ReturnButton from "./fixed/returnButton";
+import API from "./../services/api";
 
-function CreateCustomWorkout() {
+export default function CreateCustomExercise() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -35,36 +37,11 @@ function CreateCustomWorkout() {
 
   const createCustomExercise = async () => {
     const { name, muscle_group, difficulty_level } = customExerciseData;
-    if (!name || !muscle_group || !difficulty_level) {
-      setIsEmptyField(true);
-      return;
-    }
-
-    console.log(customExerciseData);
-    console.log(JSON.stringify(customExerciseData));
-    const parsedCustomExerciseData = JSON.stringify(customExerciseData);
 
     try {
       setIsLoading(true);
-      const response = await fetch(
-        "http://localhost:3001/api/custom-exercises",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: parsedCustomExerciseData,
-        },
-      );
-
-      if (!response.ok) {
-        throw new Error(
-          `Error creating custom exercise: ${response.status} - ${response.statusText}`,
-        );
-      }
-
-      const responseData = await response.json();
-      console.log("Custom exercise created successfully:", responseData);
+      await API.createCustomExercise(customExerciseData);
+      console.log("Custom exercise created successfully:", customExerciseData);
       closeModal();
     } catch (error) {
       console.error("Error creating custom exercise:", error);
@@ -80,6 +57,8 @@ function CreateCustomWorkout() {
 
   return (
     <div>
+      <ReturnButton />
+      <h1>Custom Exercise</h1>
       <button onClick={openModal} disabled={isLoading}>
         {isLoading ? "Creating..." : "Create Custom Exercise"}
       </button>
@@ -170,5 +149,3 @@ function CreateCustomWorkout() {
     </div>
   );
 }
-
-export default CreateCustomWorkout;

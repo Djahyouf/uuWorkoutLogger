@@ -1,0 +1,8 @@
+.link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 10px;
+}

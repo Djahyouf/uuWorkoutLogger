@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
+import ReturnButton from "./fixed/returnButton";
+import API from "./../services/api";
 
 function LogWorkout() {
   const [exercises, setExercises] = useState([
@@ -20,8 +22,7 @@ function LogWorkout() {
 
   const fetchExercises = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/exercises");
-      const data = await response.json();
+      const data = await API.getExercises();
       setExerciseOptions(data);
     } catch (error) {
       console.error("Error fetching exercises:", error);
@@ -31,8 +32,7 @@ function LogWorkout() {
   const fetchRoutines = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:3001/api/routines");
-      const data = await response.json();
+      const data = await API.getRoutines();
       setRoutines(data);
     } catch (error) {
       console.error("Error fetching routines:", error);
@@ -119,20 +119,7 @@ function LogWorkout() {
         })),
       };
 
-      const response = await fetch("http://localhost:3001/api/workouts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formattedWorkout),
-      });
-
-      if (!response.ok) {
-        throw new Error(
-          `Error logging workout: ${response.status} - ${response.statusText}`,
-        );
-      }
-
+      await API.createWorkout(formattedWorkout);
       console.log("Workout logged successfully");
       closeModal();
     } catch (error) {
@@ -160,20 +147,7 @@ function LogWorkout() {
           })),
       };
 
-      const response = await fetch("http://localhost:3001/api/routines", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formattedRoutine),
-      });
-
-      if (!response.ok) {
-        throw new Error(
-          `Error creating routine: ${response.status} - ${response.statusText}`,
-        );
-      }
-
+      await API.createRoutine(formattedRoutine);
       console.log("Routine created successfully");
       closeModal();
     } catch (error) {
@@ -204,6 +178,7 @@ function LogWorkout() {
 
   return (
     <div>
+      <ReturnButton />
       <h1>Logging</h1>
       <button onClick={() => setModalIsOpen(true)}>Log Workout</button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
