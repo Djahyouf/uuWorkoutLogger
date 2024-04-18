@@ -27,4 +27,19 @@ router.post("/workouts", async (req, res) => {
   }
 });
 
+router.delete("/workouts/:date", async (req, res) => {
+  const { date } = req.params;
+  try {
+    const deleted = await workoutsDML.deleteWorkout(date);
+    if (deleted) {
+      res.status(200).send("Workout deleted successfully");
+    } else {
+      res.status(404).send("Workout not found");
+    }
+  } catch (error) {
+    console.error("Error deleting workout:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 module.exports = router;

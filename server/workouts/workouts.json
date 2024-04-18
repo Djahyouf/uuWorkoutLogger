@@ -1,29 +1,5 @@
 [
   {
-    "date": "2024-04-03T09:01:55.413Z",
-    "volume": 0,
-    "exercises": [
-      {
-        "name": "Deadlifts",
-        "sets": [
-          {
-            "reps": "1",
-            "weight": "1"
-          }
-        ]
-      },
-      {
-        "name": "Sumo Deadlifts",
-        "sets": [
-          {
-            "reps": "2",
-            "weight": "2"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "date": "2024-04-03T09:08:36.044Z",
     "volume": 0,
     "exercises": [
@@ -76,6 +52,42 @@
           {
             "reps": "12",
             "weight": "10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-04-17T13:50:03.791Z",
+    "volume": 0,
+    "exercises": [
+      {
+        "name": "Lat Pulldowns",
+        "sets": [
+          {
+            "reps": "10",
+            "weight": "55"
+          },
+          {
+            "reps": "9",
+            "weight": "55"
+          },
+          {
+            "reps": "8",
+            "weight": "55"
+          }
+        ]
+      },
+      {
+        "name": "Pull-throughs",
+        "sets": [
+          {
+            "reps": "12",
+            "weight": "22"
+          },
+          {
+            "reps": "8",
+            "weight": "26"
           }
         ]
       }

@@ -28,7 +28,24 @@ async function saveWorkout(workout) {
   }
 }
 
+async function deleteWorkout(date) {
+  try {
+    let workouts = await readWorkouts();
+    const updatedWorkouts = workouts.filter((workout) => workout.date !== date);
+    await fs.writeFile(
+      workoutsFilePath,
+      JSON.stringify(updatedWorkouts, null, 2),
+    );
+    console.log("Workout deleted successfully");
+    return true;
+  } catch (error) {
+    console.error("Error deleting workout:", error);
+    return false;
+  }
+}
+
 module.exports = {
   readWorkouts,
   saveWorkout,
+  deleteWorkout,
 };
