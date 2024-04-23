@@ -18,6 +18,17 @@ const API = {
   createCustomExercise(data) {
     return caller().post("/custom-exercises", data);
   },
+  getCustomExercises() {
+    return caller()
+      .get("/custom-exercises")
+      .then((response) => response.data)
+      .catch((error) => {
+        throw error;
+      });
+  },
+  deleteCustomExercise(id) {
+    return caller().put("/custom-exercises/" + id.toString());
+  },
   getRoutines() {
     return caller()
       .get("/routines")
@@ -41,7 +52,10 @@ const API = {
     return caller().post("/workouts", data);
   },
   deleteWorkoutByDate(date) {
-    return caller().delete("/workouts/" + date.toString());
+    return caller().delete("/workouts/delete/" + date.toString());
+  },
+  updateWorkoutByDate(date, data) {
+    return caller().put("/workouts/update/" + date.toString(), data);
   },
 };
 

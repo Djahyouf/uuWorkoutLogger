@@ -7,6 +7,7 @@ export default function CreateCustomExercise() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [viewModalIsOpen, setViewModalIsOpen] = useState(false);
   const [customExerciseData, setCustomExerciseData] = useState({
     name: "",
     muscle_group: "",
@@ -17,10 +18,20 @@ export default function CreateCustomExercise() {
     range_of_motion: "",
   });
   const [isEmptyField, setIsEmptyField] = useState(false);
+  const [selectedCustomExercise, setSelectedCustomExercise] = useState(null);
 
   useEffect(() => {
     Modal.setAppElement("#root");
   }, []);
+
+  const openViewModal = () => {
+    setViewModalIsOpen(true);
+    fetchData();
+  };
+
+  const closeViewModal = () => {
+    setViewModalIsOpen(false);
+  };
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -33,6 +44,38 @@ export default function CreateCustomExercise() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setCustomExerciseData({ ...customExerciseData, [name]: value });
+  };
+
+  const handleSelectCustomExercise = (exercise) => {
+    setSelectedCustomExercise(exercise);
+  };
+
+  const renderCustomExercises = () => {
+    return (
+      <div>
+        {data.map((exercise) => (
+          <div key={exercise.id}>
+            <p>{exercise.name}</p>
+            <button onClick={() => deleteCustomExercise(exercise.id)}>
+              Delete
+            </button>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const deleteCustomExercise = async (exerciseId) => {
+    try {
+      setIsLoading(true);
+      await API.deleteCustomExercise(exerciseId);
+      console.log("Custom exercise deleted successfully");
+      fetchData(); // Refresh custom exercises data after deletion
+    } catch (error) {
+      console.error("Error deleting custom exercise:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const createCustomExercise = async () => {
@@ -51,6 +94,18 @@ export default function CreateCustomExercise() {
     }
   };
 
+  const fetchData = async () => {
+    try {
+      setIsLoading(true);
+      const customExercises = await API.getCustomExercises();
+      setData(customExercises);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching custom exercises:", error);
+      setIsLoading(false);
+    }
+  };
+
   const difficultyLevels = ["easy", "medium", "hard", "extreme"];
   const rangeOfMotions = ["static", "partial", "full"];
   const isolationOrCompound = ["isolation", "compound"];
@@ -61,6 +116,10 @@ export default function CreateCustomExercise() {
       <h1>Custom Exercise</h1>
       <button onClick={openModal} disabled={isLoading}>
         {isLoading ? "Creating..." : "Create Custom Exercise"}
+      </button>
+
+      <button onClick={openViewModal} disabled={isLoading}>
+        {isLoading ? "Loading..." : "View Custom Exercises"}
       </button>
 
       <Modal
@@ -145,6 +204,19 @@ export default function CreateCustomExercise() {
             Save
           </button>
         </form>
+      </Modal>
+
+      <Modal
+        isOpen={viewModalIsOpen}
+        onRequestClose={closeViewModal}
+        contentLabel="View Custom Exercises Modal"
+      >
+        <h2>Custom Exercises</h2>
+        {isLoading ? (
+          <p>Loading custom exercises...</p>
+        ) : (
+          renderCustomExercises()
+        )}
       </Modal>
     </div>
   );

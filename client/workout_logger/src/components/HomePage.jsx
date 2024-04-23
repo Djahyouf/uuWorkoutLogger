@@ -13,12 +13,12 @@ export default function HomePage(params) {
       <ul className="link-list">
         <li>
           <Link to="/log" className="dom-link">
-            Log
+            log a workout
           </Link>
         </li>
         <li>
           <Link to="/custom" className="dom-link">
-            Create a custom exercise
+            manage custom exercises
           </Link>
         </li>
       </ul>

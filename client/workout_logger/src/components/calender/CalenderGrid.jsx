@@ -7,6 +7,8 @@ const CalendarGrid = ({ currentMonth, currentYear }) => {
   const [selectedDay, setSelectedDay] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [workoutInfo, setWorkoutInfo] = useState(null);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [modifiedWorkout, setModifiedWorkout] = useState(null);
 
   useEffect(() => {
     fetchWorkouts();
@@ -52,6 +54,26 @@ const CalendarGrid = ({ currentMonth, currentYear }) => {
     }
   };
 
+  const handleEditClick = () => {
+    setIsEditMode(true);
+    setModifiedWorkout({ ...workoutInfo });
+  };
+
+  const handleCancelEdit = () => {
+    setIsEditMode(false);
+  };
+
+  const handleSaveEdit = async () => {
+    try {
+      await API.updateWorkoutByDate(modifiedWorkout.date, modifiedWorkout);
+      console.log("Workout modified successfully");
+      setWorkoutInfo(modifiedWorkout);
+      setIsEditMode(false);
+    } catch (error) {
+      console.error("Error modifying workout:", error);
+    }
+  };
+
   const handleDayClick = (day) => {
     setSelectedDay(day);
     fetchWorkoutInfo(day);
@@ -89,13 +111,19 @@ const CalendarGrid = ({ currentMonth, currentYear }) => {
   const daysArray = generateDaysArray();
 
   const deleteWorkout = async () => {
-        console.log(workoutInfo.date);
+    console.log(workoutInfo.date);
     try {
       await API.deleteWorkoutByDate(workoutInfo.date);
       closeModal();
     } catch (error) {
       console.error("Error deleting workout:", error);
     }
+  };
+
+  const modifyWorkout = () => {
+    // Handle modification process here
+    console.log("Modify workout:", workoutInfo.date);
+    // You can open a modal or navigate to a new page for workout modification
   };
 
   return (
@@ -124,7 +152,8 @@ const CalendarGrid = ({ currentMonth, currentYear }) => {
         contentLabel="Workout Information"
       >
         <h2>Workout Information</h2>
-        {workoutInfo ? (
+
+        {workoutInfo && !isEditMode && (
           <div>
             <p>Date: {workoutInfo.date}</p>
             <p>Volume: {workoutInfo.volume}</p>
@@ -144,10 +173,74 @@ const CalendarGrid = ({ currentMonth, currentYear }) => {
               ))}
             </ul>
             <button onClick={deleteWorkout}>Delete Workout</button>
+            <button onClick={handleEditClick}>Edit Workout</button>
           </div>
-        ) : (
-          <p>No workout information available for this day.</p>
         )}
+
+        {workoutInfo && isEditMode && (
+          <div>
+            <h2>Edit Workout</h2>
+            {/* Input fields for modifying workout information */}
+            <input
+              type="text"
+              value={modifiedWorkout.date}
+              onChange={(e) =>
+                setModifiedWorkout({
+                  ...modifiedWorkout,
+                  date: e.target.value,
+                })
+              }
+            />
+            <input
+              type="text"
+              value={modifiedWorkout.volume}
+              onChange={(e) =>
+                setModifiedWorkout({
+                  ...modifiedWorkout,
+                  volume: e.target.value,
+                })
+              }
+            />
+            {/* Input fields for modifying exercises */}
+            {modifiedWorkout.exercises.map((exercise, index) => (
+              <div key={index}>
+                <h3>{exercise.name}</h3>
+                {exercise.sets.map((set, setIndex) => (
+                  <div key={setIndex}>
+                    <input
+                      type="text"
+                      value={set.reps}
+                      onChange={(e) =>
+                        setModifiedWorkout((prevState) => {
+                          const updatedExercise = [...prevState.exercises];
+                          updatedExercise[index].sets[setIndex].reps =
+                            e.target.value;
+                          return { ...prevState, exercises: updatedExercise };
+                        })
+                      }
+                    />
+                    <input
+                      type="text"
+                      value={set.weight}
+                      onChange={(e) =>
+                        setModifiedWorkout((prevState) => {
+                          const updatedExercise = [...prevState.exercises];
+                          updatedExercise[index].sets[setIndex].weight =
+                            e.target.value;
+                          return { ...prevState, exercises: updatedExercise };
+                        })
+                      }
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+            <button onClick={handleSaveEdit}>Save Changes</button>
+            <button onClick={handleCancelEdit}>Cancel</button>
+          </div>
+        )}
+
+        {!workoutInfo && <p>No workout information available for this day.</p>}
       </Modal>
     </div>
   );

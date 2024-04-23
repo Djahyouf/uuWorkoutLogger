@@ -30,4 +30,34 @@ router.post("/custom-exercises", async (req, res) => {
   }
 });
 
+router.get("/custom-exercises", async (req, res) => {
+  console.log("custom exercises requested...");
+
+  try {
+    const exercises = await dml.getCustomExercises();
+    console.log("custom exercises recieved !");
+    res.json(exercises);
+    console.log("custom exercises sent !");
+  } catch (error) {
+    console.error("Error fetching custom exercises:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+router.put("/custom-exercises/:id", async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const success = await dml.deleteCustomExercise(id);
+    if (success) {
+      res.status(200).send("Custom exercise deleted successfully");
+    } else {
+      res.status(404).send("Custom exercise not found");
+    }
+  } catch (error) {
+    console.error("Error deleting custom exercise:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 module.exports = router;

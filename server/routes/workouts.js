@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const workoutsDML = require("../workouts/workoutsDataManagementLayer");
 
 const router = express.Router();
@@ -27,7 +28,7 @@ router.post("/workouts", async (req, res) => {
   }
 });
 
-router.delete("/workouts/:date", async (req, res) => {
+router.delete("/workouts/delete/:date", async (req, res) => {
   const { date } = req.params;
   try {
     const deleted = await workoutsDML.deleteWorkout(date);
@@ -38,6 +39,27 @@ router.delete("/workouts/:date", async (req, res) => {
     }
   } catch (error) {
     console.error("Error deleting workout:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+router.put("/workouts/update/:date", async (req, res) => {
+
+    console.log("Request Body:");
+    console.log(req.body);
+
+  const { date, volume, exercises } = req.body;
+  const updatedWorkout = { date, volume, exercises };
+  updatedWorkout.date = req.params.date;
+  try {
+    const success = await workoutsDML.updateWorkout(updatedWorkout);
+    if (success) {
+      res.status(200).send("Workout updated successfully");
+    } else {
+      res.status(404).send("Workout not found");
+    }
+  } catch (error) {
+    console.error("Error updating workout:", error);
     res.status(500).send("Internal Server Error");
   }
 });

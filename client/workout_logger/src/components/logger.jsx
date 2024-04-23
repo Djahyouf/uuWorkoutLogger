@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import ReturnButton from "./fixed/returnButton";
 import API from "./../services/api";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function LogWorkout() {
   const [exercises, setExercises] = useState([
@@ -14,6 +16,7 @@ function LogWorkout() {
   const [routineModalIsOpen, setRoutineModalIsOpen] = useState(false);
   const [routines, setRoutines] = useState([]);
   const [selectedRoutine, setSelectedRoutine] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   useEffect(() => {
     fetchExercises();
@@ -108,7 +111,7 @@ function LogWorkout() {
       setIsLoading(true);
 
       const formattedWorkout = {
-        date: new Date().toISOString(),
+        date: selectedDate.toISOString(),
         volume: calculateTotalVolume(),
         exercises: exercises.map((exercise) => ({
           name: exercise.exercise,
@@ -203,6 +206,11 @@ function LogWorkout() {
             </ul>
           )}
         </Modal>
+
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+        />
 
         {exercises.map((exercise, exerciseIndex) => (
           <div key={exerciseIndex}>

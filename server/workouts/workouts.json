@@ -92,5 +92,20 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2024-04-23T13:17:39.609Z",
+    "volume": 0,
+    "exercises": [
+      {
+        "name": "Deadlifts",
+        "sets": [
+          {
+            "reps": "42",
+            "weight": "42"
+          }
+        ]
+      }
+    ]
   }
 ]

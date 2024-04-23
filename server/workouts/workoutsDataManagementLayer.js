@@ -44,8 +44,32 @@ async function deleteWorkout(date) {
   }
 }
 
+async function updateWorkout(updatedWorkout) {
+  try {
+    let workouts = await readWorkouts();
+    const index = workouts.findIndex(
+      (workout) => workout.date === updatedWorkout.date,
+    );
+    console.log("Updated Workout:", updatedWorkout);
+    console.log("Existing Workouts:", workouts);
+    if (index !== -1) {
+      workouts[index] = updatedWorkout;
+      await fs.writeFile(workoutsFilePath, JSON.stringify(workouts, null, 2));
+      console.log("Workout updated successfully");
+      return true;
+    } else {
+      console.error("Workout not found for updating");
+      return false;
+    }
+  } catch (error) {
+    console.error("Error updating workout:", error);
+    return false;
+  }
+}
+
 module.exports = {
   readWorkouts,
   saveWorkout,
   deleteWorkout,
+  updateWorkout,
 };
