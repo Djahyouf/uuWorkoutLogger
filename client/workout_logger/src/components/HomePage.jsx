@@ -16,9 +16,16 @@ export default function HomePage(params) {
             log a workout
           </Link>
         </li>
+
         <li>
           <Link to="/custom" className="dom-link">
             manage custom exercises
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/progress" className="dom-link">
+            progress tracker
           </Link>
         </li>
       </ul>
