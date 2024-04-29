@@ -11,16 +11,17 @@ import {
 import API from "./../services/api";
 import ReturnButton from "./fixed/returnButton";
 import "./../css/header.css";
-import "./../css/button.css";
+import "./../css/progress.css";
+import "./../css/graph.css";
 
 const ProgressTracker = () => {
-  const metrics = ["weight", "reps", "sets"];
-
   const [exercises, setExercises] = useState([]);
   const [selectedExercise, setSelectedExercise] = useState("");
-  const [selectedMetric, setSelectedMetric] = useState("");
   const [workouts, setWorkouts] = useState([]);
   const [progressData, setProgressData] = useState({});
+
+  const graphWidth = 500;
+  const graphHeight = 400;
 
   const fetchExercises = async () => {
     try {
@@ -44,46 +45,30 @@ const ProgressTracker = () => {
     setSelectedExercise(e.target.value);
   };
 
-  const handleMetricChange = (e) => {
-    setSelectedMetric(e.target.value);
-  };
-
   useEffect(() => {
     fetchExercises();
     fetchWorkouts();
-    if (selectedExercise && selectedMetric) {
-      if (selectedMetric === "sets") {
-        const exerciseData = workouts.flatMap((workout) => {
-          const exercise = workout.exercises.find(
-            (ex) => ex.name === selectedExercise,
-          );
-          if (exercise) {
-            return [{ date: workout.date, value: exercise.sets.length }];
-          }
-          return [];
-        });
-        setProgressData({
-          [selectedExercise]: { [selectedMetric]: exerciseData },
-        });
-      } else {
-        const exerciseData = workouts.flatMap((workout) => {
-          const exercise = workout.exercises.find(
-            (ex) => ex.name === selectedExercise,
-          );
-          if (exercise) {
-            return exercise.sets.map((set) => ({
-              date: workout.date,
-              value: parseInt(set[selectedMetric], 10) || -1,
-            }));
-          }
-          return [];
-        });
-        setProgressData({
-          [selectedExercise]: { [selectedMetric]: exerciseData },
-        });
-      }
+  }, []);
+
+  useEffect(() => {
+    if (selectedExercise) {
+      const exerciseData = workouts.flatMap((workout) => {
+        const exercise = workout.exercises.find(
+          (ex) => ex.name === selectedExercise,
+        );
+        if (exercise) {
+          return exercise.sets.map((set) => ({
+            date: workout.date,
+            weight: parseInt(set.weight, 10) || -1,
+            reps: parseInt(set.reps, 10) || -1,
+            sets: exercise.sets.length,
+          }));
+        }
+        return [];
+      });
+      setProgressData(exerciseData);
     }
-  }, [selectedExercise, selectedMetric, workouts]);
+  }, [selectedExercise, workouts]);
 
   return (
     <div>
@@ -92,7 +77,7 @@ const ProgressTracker = () => {
       </div>
 
       <ReturnButton />
-      <div>
+      <div className="exercise-select">
         <label>Select Exercise:</label>
         <select value={selectedExercise} onChange={handleExerciseChange}>
           <option value="">Choose an exercise</option>
@@ -107,58 +92,45 @@ const ProgressTracker = () => {
           ))}
         </select>
       </div>
+
       {selectedExercise && (
         <div>
-          <label>Select Metric:</label>
-          <select value={selectedMetric} onChange={handleMetricChange}>
-            <option value="">Choose a metric</option>
-            {metrics.map((metric, index) => (
-              <option key={index} value={metric}>
-                {metric}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-      {selectedExercise && selectedMetric && (
-        <div>
-          {selectedExercise && selectedMetric && (
-            <div>
-              <h3>Progress Graph</h3>
-              <BarChart
-                width={600}
-                height={400}
-                data={
-                  progressData[selectedExercise] &&
-                  progressData[selectedExercise][selectedMetric]
-                    ? progressData[selectedExercise][selectedMetric].map(
-                        (entry) => ({
-                          date: entry.date,
-                          value: entry.value,
-                        }),
-                      )
-                    : []
-                }
-              >
+          <h3>Progress Graphs</h3>
+          <div className="progress-graphs">
+            <div className="progress-graph">
+              <h4>Weight</h4>
+              <BarChart width={graphWidth} height={graphHeight} data={progressData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar
-                  dataKey="value"
-                  fill="rgba(54, 162, 235, 0.5)"
-                  stroke="rgba(54, 162, 235, 1)"
-                  strokeWidth={1}
-                  name={selectedMetric}
-                />
+                <Bar dataKey="weight" fill="#8884d8" />
               </BarChart>
             </div>
-          )}
-
-          <p>
-            Display progress graph for {selectedMetric} of {selectedExercise}
-          </p>
+            <div className="progress-graph">
+              <h4>Reps</h4>
+              <BarChart width={graphWidth} height={graphHeight} data={progressData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="reps" fill="#82ca9d" />
+              </BarChart>
+            </div>
+            <div className="progress-graph">
+              <h4>Sets</h4>
+              <BarChart width={graphWidth} height={graphHeight} data={progressData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="sets" fill="#ffcccc" />
+              </BarChart>
+            </div>
+          </div>
         </div>
       )}
     </div>

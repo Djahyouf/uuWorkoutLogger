@@ -5,7 +5,8 @@ import API from "./../services/api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./../css/header.css";
-import "./../css/button.css";
+import "./../css/buttons.css";
+import "./../css/modal.css";
 
 function LogWorkout() {
   const [exercises, setExercises] = useState([
@@ -189,7 +190,9 @@ function LogWorkout() {
         <h1>Logging</h1>
       </div>
 
-      <button className="button-24" onClick={() => setModalIsOpen(true)}>Log Workout</button>
+      <button className="log-button" onClick={() => setModalIsOpen(true)}>
+        Log Workout
+      </button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <h2>Log Workout</h2>
 
@@ -243,19 +246,23 @@ function LogWorkout() {
             </button>
             {exercise.sets.map((set, setIndex) => (
               <div key={setIndex}>
+                <label>reps:</label>
                 <input
                   type="text"
                   value={set.reps}
                   onChange={(e) => handleRepsChange(exerciseIndex, setIndex, e)}
                 />
                 {!exerciseOptions[exercise.exercise] && (
-                  <input
-                    type="text"
-                    value={set.weight}
-                    onChange={(e) =>
-                      handleWeightChange(exerciseIndex, setIndex, e)
-                    }
-                  />
+                  <div>
+                    <label>weight:</label>
+                    <input
+                      type="text"
+                      value={set.weight}
+                      onChange={(e) =>
+                        handleWeightChange(exerciseIndex, setIndex, e)
+                      }
+                    />
+                  </div>
                 )}
                 <button onClick={() => removeSet(exerciseIndex, setIndex)}>
                   Remove Set

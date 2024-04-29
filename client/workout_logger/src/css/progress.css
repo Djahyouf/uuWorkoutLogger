@@ -1,0 +1,32 @@
+.exercise-select {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.exercise-select label {
+  display: block;
+  margin-bottom: 5px; /* Add some space below the label */
+  font-size: 16px;
+  color: #333; /* Dark text color */
+}
+
+.exercise-select select {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  background-color: #fff; /* White background */
+  box-sizing: border-box;
+}
+
+.exercise-select select:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border color when focused */
+}
+
+.exercise-select select option {
+  font-size: 16px;
+  color: #333; /* Dark text color */
+}
+

@@ -3,7 +3,8 @@ import Modal from "react-modal";
 import ReturnButton from "./fixed/returnButton";
 import API from "./../services/api";
 import "./../css/header.css";
-import "./../css/button.css";
+import "./../css/buttons.css";
+import "./../css/modal.css";
 
 export default function CreateCustomExercise() {
   const [data, setData] = useState([]);
@@ -118,11 +119,20 @@ export default function CreateCustomExercise() {
       <div className="Header">
         <h1>Custom Exercise</h1>
       </div>
-      <button className="button-24" onClick={openModal} disabled={isLoading}>
+
+      <button
+        className="exercise-button"
+        onClick={openModal}
+        disabled={isLoading}
+      >
         {isLoading ? "Creating..." : "Create Custom Exercise"}
       </button>
 
-      <button className="button-24" onClick={openViewModal} disabled={isLoading}>
+      <button
+        className="exercise-button"
+        onClick={openViewModal}
+        disabled={isLoading}
+      >
         {isLoading ? "Loading..." : "View Custom Exercises"}
       </button>
 
@@ -166,18 +176,20 @@ export default function CreateCustomExercise() {
             value={customExerciseData.equipement}
             onChange={handleInputChange}
           />
-          <label>Bodyweight:</label>
-          <input
-            type="checkbox"
-            name="bodyweight"
-            checked={customExerciseData.bodyweight}
-            onChange={() =>
-              setCustomExerciseData({
-                ...customExerciseData,
-                bodyweight: !customExerciseData.bodyweight,
-              })
-            }
-          />
+          <div>
+            <label>Bodyweight:</label>
+            <input
+              type="checkbox"
+              name="bodyweight"
+              checked={customExerciseData.bodyweight}
+              onChange={() =>
+                setCustomExerciseData({
+                  ...customExerciseData,
+                  bodyweight: !customExerciseData.bodyweight,
+                })
+              }
+            />
+          </div>
           <label>Isolation vs Compound:</label>
           <select
             name="isolation_vs_compound"
