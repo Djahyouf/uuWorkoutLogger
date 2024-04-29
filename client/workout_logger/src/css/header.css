@@ -1,0 +1,10 @@
+.Header {
+  background-color: #ffa500;
+  display: flex;
+  flex-direction: row; /* Change to row to align items horizontally */
+  align-items: center;
+  justify-content: center; /* Distribute space between h1 and logo */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+

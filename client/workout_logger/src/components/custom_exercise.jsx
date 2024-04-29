@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import ReturnButton from "./fixed/returnButton";
 import API from "./../services/api";
+import "./../css/header.css";
+import "./../css/button.css";
 
 export default function CreateCustomExercise() {
   const [data, setData] = useState([]);
@@ -113,12 +115,14 @@ export default function CreateCustomExercise() {
   return (
     <div>
       <ReturnButton />
-      <h1>Custom Exercise</h1>
-      <button onClick={openModal} disabled={isLoading}>
+      <div className="Header">
+        <h1>Custom Exercise</h1>
+      </div>
+      <button className="button-24" onClick={openModal} disabled={isLoading}>
         {isLoading ? "Creating..." : "Create Custom Exercise"}
       </button>
 
-      <button onClick={openViewModal} disabled={isLoading}>
+      <button className="button-24" onClick={openViewModal} disabled={isLoading}>
         {isLoading ? "Loading..." : "View Custom Exercises"}
       </button>
 

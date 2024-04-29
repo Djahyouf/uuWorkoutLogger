@@ -9,6 +9,9 @@ import {
   Legend,
 } from "recharts";
 import API from "./../services/api";
+import ReturnButton from "./fixed/returnButton";
+import "./../css/header.css";
+import "./../css/button.css";
 
 const ProgressTracker = () => {
   const metrics = ["weight", "reps", "sets"];
@@ -84,7 +87,11 @@ const ProgressTracker = () => {
 
   return (
     <div>
-      <h2>Progress Tracker</h2>
+      <div className="Header">
+        <h1>Progress Tracker</h1>
+      </div>
+
+      <ReturnButton />
       <div>
         <label>Select Exercise:</label>
         <select value={selectedExercise} onChange={handleExerciseChange}>

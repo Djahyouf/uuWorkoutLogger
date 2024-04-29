@@ -4,6 +4,8 @@ import ReturnButton from "./fixed/returnButton";
 import API from "./../services/api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./../css/header.css";
+import "./../css/button.css";
 
 function LogWorkout() {
   const [exercises, setExercises] = useState([
@@ -182,8 +184,12 @@ function LogWorkout() {
   return (
     <div>
       <ReturnButton />
-      <h1>Logging</h1>
-      <button onClick={() => setModalIsOpen(true)}>Log Workout</button>
+
+      <div className="Header">
+        <h1>Logging</h1>
+      </div>
+
+      <button className="button-24" onClick={() => setModalIsOpen(true)}>Log Workout</button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <h2>Log Workout</h2>
 

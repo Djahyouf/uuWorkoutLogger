@@ -14,13 +14,14 @@ const ReturnButton = () => {
         position: "fixed",
         top: "20px",
         left: "20px",
-        width: "50px",
-        height: "50px",
+        width: "90px",
+        height: "90px",
         backgroundColor: "#007bff",
         color: "#fff",
         border: "none",
         borderRadius: "5px",
         cursor: "pointer",
+        fontSize: "40px",
       }}
       onClick={handleReturn}
     >
