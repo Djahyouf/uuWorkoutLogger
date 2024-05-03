@@ -2,9 +2,9 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Modal from "react-modal";
-import LogWorkout from "./components/logger";
-import CustomExercise from "./components/custom_exercise";
-import ProgressTracker from "./components/progress";
+import LogWorkout from "./components/LogWorkout";
+import CustomExercise from "./components/CustomExercise";
+import ProgressTracker from "./components/ProgressTracker";
 import HomePage from "./components/HomePage";
 
 function App() {
