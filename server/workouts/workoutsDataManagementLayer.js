@@ -5,6 +5,20 @@ const rootPath = path.dirname(process.mainModule.filename);
 const workoutsPath = path.join(rootPath, "workouts");
 const workoutsFilePath = path.join(workoutsPath, "workouts.json");
 
+function calculateVolume(workout) {
+  let totalVolume = 0;
+
+  workout.exercises.forEach((exercise) => {
+    exercise.sets.forEach((set) => {
+      const reps = parseInt(set.reps);
+      const weight = parseInt(set.weight);
+      totalVolume += reps * weight;
+    });
+  });
+
+  workout.volume = totalVolume;
+}
+
 async function readWorkouts() {
   try {
     const rawFileContent = await fs.readFile(workoutsFilePath);
@@ -19,6 +33,7 @@ async function saveWorkout(workout) {
   try {
     let workouts = await readWorkouts();
     workouts.push(workout);
+    calculateVolume(workout);
     await fs.writeFile(workoutsFilePath, JSON.stringify(workouts, null, 2));
     console.log("Workout saved successfully");
     return true;
@@ -47,6 +62,7 @@ async function deleteWorkout(date) {
 async function updateWorkout(updatedWorkout) {
   try {
     let workouts = await readWorkouts();
+    calculateVolume(updatedWorkout);
     const index = workouts.findIndex(
       (workout) => workout.date === updatedWorkout.date,
     );

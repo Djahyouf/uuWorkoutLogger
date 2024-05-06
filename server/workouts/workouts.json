@@ -1,7 +1,7 @@
 [
   {
     "date": "2024-04-03T09:08:36.044Z",
-    "volume": 0,
+    "volume": 5100,
     "exercises": [
       {
         "name": "Barbell Back Squats",
@@ -59,7 +59,7 @@
   },
   {
     "date": "2024-04-17T13:50:03.791Z",
-    "volume": 0,
+    "volume": 1957,
     "exercises": [
       {
         "name": "Lat Pulldowns",
@@ -95,7 +95,7 @@
   },
   {
     "date": "2024-04-23T13:17:39.609Z",
-    "volume": 0,
+    "volume": 1764,
     "exercises": [
       {
         "name": "Deadlifts",
@@ -110,7 +110,7 @@
   },
   {
     "date": "2024-04-24T08:55:31.618Z",
-    "volume": 0,
+    "volume": 1035,
     "exercises": [
       {
         "name": "Chin-ups",
@@ -118,6 +118,21 @@
           {
             "reps": "45",
             "weight": "23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-05-06T09:36:54.969Z",
+    "volume": 100,
+    "exercises": [
+      {
+        "name": "Deadlifts",
+        "sets": [
+          {
+            "reps": "10",
+            "weight": "10"
           }
         ]
       }
